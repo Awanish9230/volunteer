@@ -25,10 +25,9 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-gray-text uppercase tracking-wider mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-text">
-              <li>123 Community Drive</li>
-              <li>New York, NY 10001</li>
-              <li>info@volunlink.org</li>
-              <li>+1 (555) 123-4567</li>
+              <li>Ghaziabad, Uttar Pradesh</li>
+              <li>awanishverma864@gmail.com</li>
+              <li>7390083864</li>
             </ul>
           </div>
           <div>
