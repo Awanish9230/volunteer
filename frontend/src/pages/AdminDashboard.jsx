@@ -20,9 +20,9 @@ const AdminDashboard = () => {
         };
 
         const [volRes, eventRes, certRes] = await Promise.all([
-          axios.get('https://volunteer-438c.onrender.com/api/volunteers', config),
-          axios.get('https://volunteer-438c.onrender.com/api/events', config),
-          axios.get('https://volunteer-438c.onrender.com/api/certificates', config)
+          axios.get(`${import.meta.env.VITE_API_URL || 'https://volunteerb.onrender.com'}/api/volunteers`, config),
+          axios.get(`${import.meta.env.VITE_API_URL || 'https://volunteerb.onrender.com'}/api/events`, config),
+          axios.get(`${import.meta.env.VITE_API_URL || 'https://volunteerb.onrender.com'}/api/certificates`, config)
         ]);
 
         setVolunteers(volRes.data);

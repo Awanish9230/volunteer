@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://volunteer-438c.onrender.com/api/auth/';
+const API_URL = `${import.meta.env.VITE_API_URL || 'https://volunteerb.onrender.com'}/api/auth/`;
 
 // Register user
 const register = async (userData) => {

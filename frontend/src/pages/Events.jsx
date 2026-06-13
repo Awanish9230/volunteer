@@ -21,7 +21,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get('https://volunteer-438c.onrender.com/api/events');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL || 'https://volunteerb.onrender.com'}/api/events`);
         setEvents(res.data);
       } catch (error) {
         console.error("Error fetching events", error);
