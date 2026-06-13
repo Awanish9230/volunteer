@@ -8,7 +8,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       // 1. Register User Auth
-      const res = await axios.post('http://localhost:5000/api/auth/register', {
+      const res = await axios.post('https://volunteer-438c.onrender.com/api/auth/register', {
         name: data.name,
         email: data.email,
         password: data.password,
@@ -19,7 +19,7 @@ const Register = () => {
       const userAuth = res.data;
       
       // 2. Create Volunteer Profile
-      await axios.post('http://localhost:5000/api/volunteers', {
+      await axios.post('https://volunteer-438c.onrender.com/api/volunteers', {
         dob: data.dob,
         gender: data.gender,
         address: {

@@ -20,9 +20,9 @@ const AdminDashboard = () => {
         };
 
         const [volRes, eventRes, certRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/volunteers', config),
-          axios.get('http://localhost:5000/api/events', config),
-          axios.get('http://localhost:5000/api/certificates', config)
+          axios.get('https://volunteer-438c.onrender.com/api/volunteers', config),
+          axios.get('https://volunteer-438c.onrender.com/api/events', config),
+          axios.get('https://volunteer-438c.onrender.com/api/certificates', config)
         ]);
 
         setVolunteers(volRes.data);
