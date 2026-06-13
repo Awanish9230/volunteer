@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -33,21 +35,24 @@ const DynamicTitle = () => {
 
 function App() {
   return (
-    <Router>
-      <DynamicTitle />
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="events" element={<Events />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-          <Route path="admin" element={<AdminDashboard />} />
-          <Route path="volunteer" element={<VolunteerDashboard />} />
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+      <Router>
+        <DynamicTitle />
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="events" element={<Events />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="admin" element={<AdminDashboard />} />
+            <Route path="volunteer" element={<VolunteerDashboard />} />
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 

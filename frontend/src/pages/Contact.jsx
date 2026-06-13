@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
 const Contact = () => {
@@ -53,7 +54,13 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="p-10 bg-white z-10">
-            <form className="space-y-6">
+            <form 
+              className="space-y-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                toast.success("Message sent successfully! We will get back to you soon.");
+              }}
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-text mb-2">First Name</label>

@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { loginUser, reset } from '../slices/authSlice';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,10 +16,11 @@ const Login = () => {
 
   useEffect(() => {
     if (isError) {
-      alert(message);
+      toast.error(message || "Login failed");
     }
 
     if (isSuccess || user) {
+      toast.success("Login successful!");
       if (user?.role === 'Admin') {
         navigate('/admin');
       } else {

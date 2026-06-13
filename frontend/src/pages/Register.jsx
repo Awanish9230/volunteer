@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -45,9 +46,12 @@ const Register = () => {
 
       // 3. Login User manually and redirect to dashboard
       localStorage.setItem('user', JSON.stringify(userAuth));
-      window.location.href = '/volunteer';
+      toast.success("Registration successful!");
+      setTimeout(() => {
+        window.location.href = '/volunteer';
+      }, 1500);
     } catch (error) {
-      alert(error.response?.data?.message || 'Error registering');
+      toast.error(error.response?.data?.message || 'Error registering');
     }
   };
 

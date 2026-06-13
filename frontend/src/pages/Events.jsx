@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { FiCalendar, FiMapPin, FiClock } from 'react-icons/fi';
 
 const Events = () => {
@@ -84,7 +85,14 @@ const Events = () => {
                   </div>
                 </div>
 
-                <button className="btn-primary w-full py-3 mt-auto">Register for Event</button>
+                <button 
+                  className="btn-primary w-full py-3 mt-auto"
+                  onClick={() => {
+                    toast.success(`Successfully registered for ${event.title}!`);
+                  }}
+                >
+                  Register for Event
+                </button>
               </div>
             ))}
           </div>
