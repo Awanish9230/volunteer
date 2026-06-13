@@ -57,17 +57,17 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-text mb-2">First Name</label>
-                  <input type="text" className="input-field bg-gray-50 focus:bg-white" placeholder="Jane" />
+                  <input type="text" className="input-field bg-gray-50 focus:bg-white" placeholder="Awanish" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-text mb-2">Last Name</label>
-                  <input type="text" className="input-field bg-gray-50 focus:bg-white" placeholder="Doe" />
+                  <input type="text" className="input-field bg-gray-50 focus:bg-white" placeholder="Verma" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-text mb-2">Email Address</label>
-                <input type="email" className="input-field bg-gray-50 focus:bg-white" placeholder="jane@example.com" />
+                <input type="email" className="input-field bg-gray-50 focus:bg-white" placeholder="awanishverma864@gmail.com" />
               </div>
 
               <div>
